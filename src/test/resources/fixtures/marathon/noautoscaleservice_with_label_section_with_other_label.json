@@ -1,0 +1,163 @@
+{
+  "apps": [
+    {
+      "id": "/z-donot-delete/nginx",
+      "cmd": null,
+      "args": null,
+      "user": null,
+      "env": {},
+      "instances": 2,
+      "cpus": 0.1,
+      "mem": 128,
+      "disk": 0,
+      "gpus": 0,
+      "executor": "",
+      "constraints": [],
+      "uris": [],
+      "fetch": [],
+      "storeUrls": [],
+      "backoffSeconds": 1,
+      "backoffFactor": 1.15,
+      "maxLaunchDelaySeconds": 3600,
+      "container": {
+        "type": "DOCKER",
+        "volumes": [],
+        "docker": {
+          "image": "nginx",
+          "network": "BRIDGE",
+          "portMappings": [
+            {
+              "containerPort": 80,
+              "hostPort": 0,
+              "servicePort": 10106,
+              "protocol": "tcp",
+              "name": "default",
+              "labels": {}
+            }
+          ],
+          "privileged": false,
+          "parameters": [],
+          "forcePullImage": false
+        }
+      },
+      "healthChecks": [
+        {
+          "gracePeriodSeconds": 300,
+          "intervalSeconds": 60,
+          "timeoutSeconds": 20,
+          "maxConsecutiveFailures": 3,
+          "portIndex": 0,
+          "path": "/",
+          "protocol": "HTTP",
+          "ignoreHttp1xx": false
+        }
+      ],
+      "readinessChecks": [],
+      "dependencies": [],
+      "upgradeStrategy": {
+        "minimumHealthCapacity": 1,
+        "maximumOverCapacity": 1
+      },
+      "labels": {
+        "F5_0_BIND_ADDR": "10.191.63.254",
+        "F5_PARTITION": "dcos",
+        "F5_0_MODE": "http",
+        "F5_0_PORT": "80",
+        "MONITORING": "true"
+      },
+      "ipAddress": null,
+      "version": "2017-07-20T09:17:24.857Z",
+      "residency": null,
+      "secrets": {},
+      "taskKillGracePeriodSeconds": null,
+      "unreachableStrategy": {
+        "inactiveAfterSeconds": 300,
+        "expungeAfterSeconds": 600
+      },
+      "killSelection": "YOUNGEST_FIRST",
+      "ports": [
+        10106
+      ],
+      "portDefinitions": [
+        {
+          "port": 10106,
+          "protocol": "tcp",
+          "name": "default",
+          "labels": {}
+        }
+      ],
+      "requirePorts": true,
+      "versionInfo": {
+        "lastScalingAt": "2017-07-20T09:17:24.857Z",
+        "lastConfigChangeAt": "2017-07-20T09:17:24.857Z"
+      },
+      "tasksStaged": 0,
+      "tasksRunning": 2,
+      "tasksHealthy": 2,
+      "tasksUnhealthy": 0,
+      "deployments": [],
+      "tasks": [
+        {
+          "ipAddresses": [
+            {
+              "ipAddress": "10.195.0.3",
+              "protocol": "IPv4"
+            }
+          ],
+          "stagedAt": "2017-07-20T09:17:24.938Z",
+          "state": "TASK_RUNNING",
+          "ports": [
+            6015
+          ],
+          "startedAt": "2017-07-20T09:17:34.993Z",
+          "version": "2017-07-20T09:17:24.857Z",
+          "id": "z-donot-delete_nginx.3e4de461-6d2c-11e7-916a-12c6046b2bbf",
+          "appId": "/z-donot-delete/nginx",
+          "slaveId": "61ca5b11-0a6c-410f-8c2c-938b23b66ef1-S5",
+          "host": "10.191.60.89",
+          "healthCheckResults": [
+            {
+              "alive": true,
+              "consecutiveFailures": 0,
+              "firstSuccess": "2017-07-20T09:18:29.953Z",
+              "lastFailure": null,
+              "lastSuccess": "2017-07-20T09:18:29.953Z",
+              "lastFailureCause": null,
+              "instanceId": "z-donot-delete_nginx.marathon-3e4de461-6d2c-11e7-916a-12c6046b2bbf"
+            }
+          ]
+        },
+        {
+          "ipAddresses": [
+            {
+              "ipAddress": "10.195.0.3",
+              "protocol": "IPv4"
+            }
+          ],
+          "stagedAt": "2017-07-20T09:17:24.936Z",
+          "state": "TASK_RUNNING",
+          "ports": [
+            19386
+          ],
+          "startedAt": "2017-07-20T09:17:26.913Z",
+          "version": "2017-07-20T09:17:24.857Z",
+          "id": "z-donot-delete_nginx.3e4d6f30-6d2c-11e7-916a-12c6046b2bbf",
+          "appId": "/z-donot-delete/nginx",
+          "slaveId": "61ca5b11-0a6c-410f-8c2c-938b23b66ef1-S3",
+          "host": "10.191.60.52",
+          "healthCheckResults": [
+            {
+              "alive": true,
+              "consecutiveFailures": 0,
+              "firstSuccess": "2017-07-20T09:17:29.931Z",
+              "lastFailure": null,
+              "lastSuccess": "2017-07-20T09:18:29.951Z",
+              "lastFailureCause": null,
+              "instanceId": "z-donot-delete_nginx.marathon-3e4d6f30-6d2c-11e7-916a-12c6046b2bbf"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

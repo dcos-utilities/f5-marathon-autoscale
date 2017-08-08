@@ -1,0 +1,10 @@
+# TYPE bigip_pool_active_member_cnt gauge
+bigip_pool_active_member_cnt{partition="dcos",pool="mckdcossd_10.191.63.253_80"} 1
+bigip_pool_active_member_cnt{partition="dcos",pool="z-donot-delete_nginx_10.191.63.254_80"} 2
+bigip_pool_active_member_cnt{partition="dcos",pool="z-donot-delete_webservice_10.191.63.253_80"} 5
+
+# HELP bigip_pool_tot_requests tot_requests
+bigip_pool_tot_requests{partition="dcos",pool="mckdcossd_10.191.63.253_80"} 21
+bigip_pool_tot_requests{partition="dcos",pool="z-donot-delete_nginx_10.191.63.254_80"} 2
+bigip_pool_tot_requests{partition="dcos",pool="z-donot-delete_webservice_10.191.63.253_80"} 400
+
