@@ -3,7 +3,7 @@
 A service which talks to f5exporter <code>/metrics</code> and Marathon <code>/v2/apps</code> URLs and makes a decision of whether to increase or decrease the number of DCOS/Marathon service instances based on the requests per second load on the VIP.
 Autoscale configuration is provided by using service labels on the DCOS/Marathon applications.
 
-![Architecture](http://github.com/dcos-utilities/f5-marathon-autoscale/blob/master/diagrams/Autoscaling.png)
+![Architecture](https://github.com/dcos-utilities/f5-marathon-autoscale/blob/master/diagrams/Autoscaling.png)
 
 ## Service Configration
 
