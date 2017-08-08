@@ -33,3 +33,7 @@ Each service that wants to get autoscaled has to include the below labels in the
 
 * /metrics - Exposes metrics in prometheus format for dependencies health
 * /health - Returns 200 if the service is active
+
+## Dockerhub
+
+https://hub.docker.com/r/dcosutilities/f5-marathon-autoscale/tags/
